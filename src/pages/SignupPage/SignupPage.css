@@ -1,0 +1,98 @@
+.signup-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIGNUP GRID
+   ========================================================= */
+
+.signup-grid {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--surface);
+}
+
+
+/* =========================================================
+   LEFT / VISUAL PANEL
+   ========================================================= */
+
+.signup-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: var(--space-12);
+
+    color: var(--text-inverse);
+    background: var(--secondary);
+}
+
+.signup-img h1,
+.signup-img p {
+    position: relative;
+    z-index: 1;
+}
+
+.signup-img h1 {
+    max-width: 550px;
+
+    margin-bottom: var(--space-3);
+
+    color: var(--text-inverse);
+
+    font-size: clamp(
+            var(--text-4xl),
+            5vw,
+            var(--text-6xl)
+    );
+
+    font-weight: var(--font-weight-bold);
+
+    line-height: var(--leading-tight);
+    letter-spacing: -0.04em;
+}
+
+.signup-img p {
+    max-width: 450px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .signup-grid {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .signup-img {
+        min-height: 240px;
+
+        padding: var(--space-8);
+    }
+
+    .signup-img h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .signup-img p {
+        font-size: var(--text-md);
+    }
+
+}

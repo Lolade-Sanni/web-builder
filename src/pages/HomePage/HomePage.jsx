@@ -1,7 +1,9 @@
+import Navbar from "../../components/navigation/navbar/Navbar.jsx"
+
 function HomePage()  {
     return (
         <main>
-            <h1>Home</h1>
+            <Navbar/>
         </main>
     );
 }
