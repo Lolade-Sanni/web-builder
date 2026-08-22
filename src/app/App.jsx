@@ -6,7 +6,7 @@ import SignupPage from "../pages/SignupPage/SignupPage.jsx";
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/web-builder">
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/login" element={<LoginPage />} />
