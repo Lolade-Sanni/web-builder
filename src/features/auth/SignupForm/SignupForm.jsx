@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignupForm.css";
-import { signup } from "../authService";
+
 const SignupForm = () => {
 
     const [firstName, setFirstName] = useState("");
@@ -15,19 +15,6 @@ const SignupForm = () => {
 
         if (password !== confirmPassword) {
             console.log("Passwords do not match");
-            return;
-        }
-
-        try {
-            const userCredential = await signup(
-                email,
-                password
-            );
-
-            console.log("Account created:", userCredential.user);
-
-        } catch (error) {
-            console.error(error);
         }
     };
 
